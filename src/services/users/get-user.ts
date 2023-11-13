@@ -1,5 +1,5 @@
 // src/services/users/get-user.ts
-import type {ApiContext, User} from '../../types'
+import type {ApiContext, User} from '../../types/data'
 import {fetcher} from '../../utils'
 
 export type GetUserParams = {
@@ -21,7 +21,7 @@ const getUser = async (
     // User 타입의 값을 가진 프로미스(Promise)를 반환한다는 것을 의미
 
     return await fetcher(
-        `${context.apiRootUrl.replace.(/\/$/g, '')}/users/${id}`,
+        `${context.apiRootUrl.replace(/\/$/g, '')}/users/${id}`,
         {
             headers: {
                 Accept: 'application/json',
