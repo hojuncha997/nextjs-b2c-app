@@ -19,3 +19,5 @@ const signout = async (context : ApiContext): Promise<{message: string}> => {
         }
     )
 }
+
+export default signout
