@@ -31,3 +31,16 @@ const getUser = async (
     )
 }
 export default getUser
+
+/**
+  // 사용자 API
+  // 샘플 응답
+  {
+    "id": "1",
+    "username": "hana",
+    "displayName": "Hana Kim",
+    "email": "hana.kim@example.com",
+    "profileImageUrl": "/users/1.png",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+  }
+   */
