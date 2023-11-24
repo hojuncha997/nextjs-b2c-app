@@ -33,5 +33,5 @@ module.exports = nextConfig;
 
 /**
  * CORS(Cross-Origin Resource Sharing, 교차 출처 리소스 공유): 한 오리진의 웹애플리케이션에 대해 다른 오리진의 서버 접근을 HTTP요청에 따라 허가하는 구조를 의미
- *
+ * Rewrite: Next.js의 Rewrite 기능은 지정한 URL 패턴을 내부에서 다른 URL로 변환하는 기능이다.
  */
