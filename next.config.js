@@ -15,6 +15,23 @@ const nextConfig = {
       return compilerConfig;
     }
   })(),
+
+  // CORS에서 쿠키 전송을 피하기 위해 Next.js의 Rewrite 기능을 사용해 프락시를 설정.
+  async rewrites() {
+    return [
+      {
+        // e.g. /api/proxy
+        source: `${process.env.NEXT_PUBLIC_API_BASE_PATH}/:match*`,
+        // e.g. http://localhost:8000
+        destination: `${process.API_BASE_URL}/:match*`,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
+
+/**
+ * CORS(Cross-Origin Resource Sharing, 교차 출처 리소스 공유): 한 오리진의 웹애플리케이션에 대해 다른 오리진의 서버 접근을 HTTP요청에 따라 허가하는 구조를 의미
+ *
+ */
